@@ -7,23 +7,35 @@
 
 import Foundation
 
-struct Coin {
+struct CoinArray: Decodable {
+    let data: [Coin]
+}
+
+struct Coin: Decodable {
     
     let id: Int
     let name: String
-    let max_supply: Int?
-    let cmc_rank: Int
-    let quote: Quote
+    let maxSupply: Int?
+    let rank: Int
+    let pricingData: PricingData
     
-    let logoURL = URL(string: "https://s2.coinmarketcap.com/static/img/coins/200x200/1.png")
+    var logoURL = URL(string: "https://s2.coinmarketcap.com/static/img/coins/200x200/1.png")
+    
+    enum Codingkeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case maxSupply = "max_supply"
+        case rank = "cmc_rank"
+        case pricingData = "quote"
+    }
     
 }
 
-struct Quote {
+struct PricingData: Decodable {
     let CAD: CAD
 }
 
-struct CAD {
+struct CAD: Decodable {
     let price: Double
     let market_cap: Double
 }

@@ -17,6 +17,7 @@
 		CE900DC72AC1391A005398E6 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE900DC62AC1391A005398E6 /* CoinCell.swift */; };
 		CE900DC92AC17505005398E6 /* ViewCryptoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE900DC82AC17505005398E6 /* ViewCryptoController.swift */; };
 		CE900DCB2AC2AD05005398E6 /* ViewCryptoControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE900DCA2AC2AD05005398E6 /* ViewCryptoControllerViewModel.swift */; };
+		CEAAB22E2AC4182E00ADB473 /* CoinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAB22D2AC4182E00ADB473 /* CoinError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CE900DC62AC1391A005398E6 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 		CE900DC82AC17505005398E6 /* ViewCryptoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCryptoController.swift; sourceTree = "<group>"; };
 		CE900DCA2AC2AD05005398E6 /* ViewCryptoControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCryptoControllerViewModel.swift; sourceTree = "<group>"; };
+		CEAAB22D2AC4182E00ADB473 /* CoinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CE900DC42AC12C84005398E6 /* Coin.swift */,
+				CEAAB22D2AC4182E00ADB473 /* CoinError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				CE900DCB2AC2AD05005398E6 /* ViewCryptoControllerViewModel.swift in Sources */,
 				CE900DAB2AC12292005398E6 /* SceneDelegate.swift in Sources */,
 				CE900DC92AC17505005398E6 /* ViewCryptoController.swift in Sources */,
+				CEAAB22E2AC4182E00ADB473 /* CoinError.swift in Sources */,
 				CE900DC52AC12C85005398E6 /* Coin.swift in Sources */,
 				CE900DC72AC1391A005398E6 /* CoinCell.swift in Sources */,
 				CE900DC32AC1275A005398E6 /* Constants.swift in Sources */,

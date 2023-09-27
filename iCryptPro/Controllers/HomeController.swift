@@ -11,9 +11,9 @@ class HomeController: UIViewController {
     
     // MARK: - Variables
     private let coins: [Coin] = [
-        Coin(id: 1, name: "Bitcoin", max_supply: 200, cmc_rank: 1, quote: Coin.Quote(CAD: Coin.Quote.CAD(price: 50000, market_cap: 1_000_000))),
-        Coin(id: 2, name: "Ethereum", max_supply: 140, cmc_rank: 2, quote: Coin.Quote(CAD: Coin.Quote.CAD(price: 2000, market_cap: 500_000))),
-        Coin(id: 3, name: "Monero", max_supply: nil, cmc_rank: 3, quote: Coin.Quote(CAD: Coin.Quote.CAD(price: 1000, market_cap: 250_000)))
+        Coin(id: 1, name: "Bitcoin", maxSupply: 200, rank: 1, pricingData: PricingData(CAD: CAD(price: 50000, market_cap: 1_000_000))),
+        Coin(id: 2, name: "Ethereum", maxSupply: 140, rank: 2, pricingData: PricingData(CAD: CAD(price: 2000, market_cap: 500_000))),
+        Coin(id: 3, name: "Monero", maxSupply: nil, rank: 3, pricingData: PricingData(CAD: CAD(price: 1000, market_cap: 250_000)))
     ]
     
     // MARK: - UI Components
