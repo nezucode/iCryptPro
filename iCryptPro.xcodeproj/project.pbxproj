@@ -21,6 +21,7 @@
 		CEAAB2302AC5041600ADB473 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAB22F2AC5041600ADB473 /* HTTP.swift */; };
 		CEAAB2322AC55A9500ADB473 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAB2312AC55A9500ADB473 /* Endpoint.swift */; };
 		CEAAB2342AC575E900ADB473 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAB2332AC575E900ADB473 /* CoinService.swift */; };
+		CEAAB2362AC57F3900ADB473 /* HomeControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAB2352AC57F3900ADB473 /* HomeControllerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CEAAB22F2AC5041600ADB473 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		CEAAB2312AC55A9500ADB473 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CEAAB2332AC575E900ADB473 /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
+		CEAAB2352AC57F3900ADB473 /* HomeControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CE900DCA2AC2AD05005398E6 /* ViewCryptoControllerViewModel.swift */,
+				CEAAB2352AC57F3900ADB473 /* HomeControllerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				CEAAB2302AC5041600ADB473 /* HTTP.swift in Sources */,
 				CEAAB22E2AC4182E00ADB473 /* CoinError.swift in Sources */,
 				CE900DC52AC12C85005398E6 /* Coin.swift in Sources */,
+				CEAAB2362AC57F3900ADB473 /* HomeControllerViewModel.swift in Sources */,
 				CE900DC72AC1391A005398E6 /* CoinCell.swift in Sources */,
 				CEAAB2322AC55A9500ADB473 /* Endpoint.swift in Sources */,
 				CEAAB2342AC575E900ADB473 /* CoinService.swift in Sources */,
