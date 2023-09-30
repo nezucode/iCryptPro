@@ -20,6 +20,7 @@ class CoinService {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(.unknown(error.localizedDescription)))
+                print(error.localizedDescription)
                 return
             }
             
@@ -38,11 +39,22 @@ class CoinService {
                 
                 do {
                     let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let coinData = try decoder.decode(CoinArray.self, from: data)
                     completion(.success(coinData.data))
-                } catch let error {
-                    completion(.failure(.decodingError()))
-                    print(error.localizedDescription)
+                } catch let DecodingError.dataCorrupted(context) {
+                    print(context)
+                } catch let DecodingError.keyNotFound(key, context) {
+                    print("Key '\(key)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.valueNotFound(value, context) {
+                    print("Value '\(value)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.typeMismatch(type, context)  {
+                    print("Type '\(type)' mismatch:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch {
+                    print("error: ", error)
                 }
             } else {
                 completion(.failure(.unknown()))

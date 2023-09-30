@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct CoinArray: Decodable {
+struct CoinArray: Codable {
     let data: [Coin]
 }
 
-struct Coin: Decodable {
+struct Coin: Codable {
     
     let id: Int
     let name: String
@@ -33,11 +33,11 @@ struct Coin: Decodable {
     
 }
 
-struct PricingData: Decodable {
+struct PricingData: Codable {
     let CAD: CAD
 }
 
-struct CAD: Decodable {
+struct CAD: Codable {
     let price: Double
     let market_cap: Double
 }
