@@ -57,9 +57,9 @@ class HomeController: UIViewController {
                 case .unknown(let string):
                     alert.title = "Error Fetching Coins"
                     alert.message = string
-                case .decodingError(_):
+                case .decodingError(let string):
                     alert.title = "Error Parsing Data"
-                    alert.message = "\(error.localizedDescription)"
+                    alert.message = string
                 }
                 self?.present(alert, animated: true)
             }

@@ -15,25 +15,25 @@ struct Coin: Codable {
     
     let id: Int
     let name: String
-    let maxSupply: Int?
-    let rank: Int
-    let pricingData: PricingData
+    let max_supply: Int?
+    let cmc_rank: Int
+    let quote: Quote
     
     var logoURL: URL? {
         return URL(string: "https://s2.coinmarketcap.com/static/img/coins/200x200/\(id).png")
     }
     
-    enum Codingkeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
-        case maxSupply = "max_supply"
-        case rank = "cmc_rank"
-        case pricingData = "quote"
-    }
+//    enum Codingkeys: String, CodingKey {
+//        case id = "id"
+//        case name = "name"
+//        case maxSupply = "max_supply"
+//        case rank = "cmc_rank"
+//        case pricingData = "quote"
+//    }
     
 }
 
-struct PricingData: Codable {
+struct Quote: Codable {
     let CAD: CAD
 }
 
