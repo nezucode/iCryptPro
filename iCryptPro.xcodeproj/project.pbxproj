@@ -109,8 +109,8 @@
 		CE900DBE2AC12651005398E6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CE900DCA2AC2AD05005398E6 /* ViewCryptoControllerViewModel.swift */,
 				CEAAB2352AC57F3900ADB473 /* HomeControllerViewModel.swift */,
+				CE900DCA2AC2AD05005398E6 /* ViewCryptoControllerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

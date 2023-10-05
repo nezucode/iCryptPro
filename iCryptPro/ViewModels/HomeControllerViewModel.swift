@@ -21,9 +21,9 @@ class HomeControllerViewModel {
         self.fetchCoins()
     }
     
-    public func removeCoin() {
-        self.coins.remove(at: 0)
-    }
+//    public func removeCoin() {
+//        self.coins.remove(at: 0)
+//    }
     
     public func fetchCoins() {
         let endpoint = Endpoint.fetchCoins()

@@ -39,7 +39,7 @@ class HomeController: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-
+        
         self.viewModel.onCoinsUpdated = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
@@ -53,17 +53,15 @@ class HomeController: UIViewController {
                 
                 switch error {
                 case .serverError(let serverError):
-                    alert.title = "Server Error \(serverError.errorCode)"
-                    alert.message = serverError.errorMessage
-                    
+                    alert.title = "Server error \(serverError.errorCode)"
                 case .unknown(let string):
                     alert.title = "Error Fetching Coins"
                     alert.message = string
-                    
-                case .decodingError(let string):
+                case .decodingError(_):
                     alert.title = "Error Parsing Data"
-                    alert.message = string
+                    alert.message = "\(error.localizedDescription)"
                 }
+                self?.present(alert, animated: true)
             }
         }
     }

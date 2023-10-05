@@ -46,16 +46,20 @@ class CoinCell: UITableViewCell {
         
         self.coinName.text = coin.name
         
-        guard let url = self.coin.logoURL else { return }
-        
-        let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-            guard let imageData = data else { return }
+        DispatchQueue.global().async { [weak self] in
+            guard let url = coin.logoURL else { return }
+            
+            let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+                guard let imageData = data else { return }
 
-            DispatchQueue.main.async { [weak self] in
-            self?.coinLogo.image = UIImage(data: imageData)
+                DispatchQueue.main.async { [weak self] in
+                self?.coinLogo.image = UIImage(data: imageData)
+                }
             }
+            dataTask.resume()
         }
-        dataTask.resume()
+        
+        
         
         
 //        let imageData = try? Data(contentsOf: self.coin.logoURL!)

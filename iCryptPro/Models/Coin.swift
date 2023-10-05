@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoinArray: Codable {
+struct CoinArray: Decodable {
     let data: [Coin]
 }
 

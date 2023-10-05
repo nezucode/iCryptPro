@@ -5,7 +5,6 @@
 //  Created by Intan on 26/09/23.
 //
 
-import Foundation
 import UIKit
 
 class ViewCryptoControllerViewModel {
