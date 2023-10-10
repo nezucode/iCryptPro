@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9C292E5656465E40C268A71 /* Pods_iCryptPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B44B1D6FE569D0717B35357 /* Pods_iCryptPro.framework */; };
 		CE900DA92AC12292005398E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE900DA82AC12292005398E6 /* AppDelegate.swift */; };
 		CE900DAB2AC12292005398E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE900DAA2AC12292005398E6 /* SceneDelegate.swift */; };
 		CE900DAD2AC12292005398E6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE900DAC2AC12292005398E6 /* HomeController.swift */; };
@@ -22,9 +23,12 @@
 		CEAAB2322AC55A9500ADB473 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAB2312AC55A9500ADB473 /* Endpoint.swift */; };
 		CEAAB2342AC575E900ADB473 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAB2332AC575E900ADB473 /* CoinService.swift */; };
 		CEAAB2362AC57F3900ADB473 /* HomeControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAAB2352AC57F3900ADB473 /* HomeControllerViewModel.swift */; };
+		CECC42782AD42ACC0066C179 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CECC42772AD42ACC0066C179 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B44B1D6FE569D0717B35357 /* Pods_iCryptPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCryptPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51B27967B5697B53D6939D39 /* Pods-iCryptPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCryptPro.debug.xcconfig"; path = "Target Support Files/Pods-iCryptPro/Pods-iCryptPro.debug.xcconfig"; sourceTree = "<group>"; };
 		CE900DA52AC12292005398E6 /* iCryptPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCryptPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE900DA82AC12292005398E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE900DAA2AC12292005398E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 		CEAAB2312AC55A9500ADB473 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CEAAB2332AC575E900ADB473 /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
 		CEAAB2352AC57F3900ADB473 /* HomeControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerViewModel.swift; sourceTree = "<group>"; };
+		E1D002CA4196CA05F62B1317 /* Pods-iCryptPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCryptPro.release.xcconfig"; path = "Target Support Files/Pods-iCryptPro/Pods-iCryptPro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +54,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECC42782AD42ACC0066C179 /* SDWebImage in Frameworks */,
+				B9C292E5656465E40C268A71 /* Pods_iCryptPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7162E747D19C1FACEEAC5039 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51B27967B5697B53D6939D39 /* Pods-iCryptPro.debug.xcconfig */,
+				E1D002CA4196CA05F62B1317 /* Pods-iCryptPro.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		90593731A37A9D2755548CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B44B1D6FE569D0717B35357 /* Pods_iCryptPro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE900D9C2AC12292005398E6 = {
 			isa = PBXGroup;
 			children = (
 				CE900DA72AC12292005398E6 /* iCryptPro */,
 				CE900DA62AC12292005398E6 /* Products */,
+				7162E747D19C1FACEEAC5039 /* Pods */,
+				90593731A37A9D2755548CEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,15 +176,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE900DB92AC12296005398E6 /* Build configuration list for PBXNativeTarget "iCryptPro" */;
 			buildPhases = (
+				89D0AA379FF8213BE7ECAA5B /* [CP] Check Pods Manifest.lock */,
 				CE900DA12AC12292005398E6 /* Sources */,
 				CE900DA22AC12292005398E6 /* Frameworks */,
 				CE900DA32AC12292005398E6 /* Resources */,
+				6E97C2105E36BBA2F10B702D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = iCryptPro;
+			packageProductDependencies = (
+				CECC42772AD42ACC0066C179 /* SDWebImage */,
+			);
 			productName = iCryptPro;
 			productReference = CE900DA52AC12292005398E6 /* iCryptPro.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +218,9 @@
 				Base,
 			);
 			mainGroup = CE900D9C2AC12292005398E6;
+			packageReferences = (
+				CECC42762AD42ACB0066C179 /* XCRemoteSwiftPackageReference "SDWebImage.git" */,
+			);
 			productRefGroup = CE900DA62AC12292005398E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,6 +241,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E97C2105E36BBA2F10B702D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCryptPro/Pods-iCryptPro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCryptPro/Pods-iCryptPro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iCryptPro/Pods-iCryptPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89D0AA379FF8213BE7ECAA5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iCryptPro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE900DA12AC12292005398E6 /* Sources */ = {
@@ -358,6 +435,7 @@
 		};
 		CE900DBA2AC12296005398E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B27967B5697B53D6939D39 /* Pods-iCryptPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +464,7 @@
 		};
 		CE900DBB2AC12296005398E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D002CA4196CA05F62B1317 /* Pods-iCryptPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -434,6 +513,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CECC42762AD42ACB0066C179 /* XCRemoteSwiftPackageReference "SDWebImage.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CECC42772AD42ACC0066C179 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECC42762AD42ACB0066C179 /* XCRemoteSwiftPackageReference "SDWebImage.git" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE900D9D2AC12292005398E6 /* Project object */;
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CoinCell: UITableViewCell {
     static let identifier = "CoinCell"
@@ -45,19 +46,7 @@ class CoinCell: UITableViewCell {
         self.coin = coin
         
         self.coinName.text = coin.name
-        
-        DispatchQueue.global().async { [weak self] in
-            guard let url = coin.logoURL else { return }
-            
-            let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-                guard let imageData = data else { return }
-
-                DispatchQueue.main.async { [weak self] in
-                self?.coinLogo.image = UIImage(data: imageData)
-                }
-            }
-            dataTask.resume()
-        }
+        self.coinLogo.sd_setImage(with: coin.logoURL)
         
         
         
