@@ -95,6 +95,8 @@ class HomeController: UIViewController {
         self.navigationItem.searchController = searchController
         self.definesPresentationContext = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
+        
+        self.searchController.searchBar.delegate = self
     }
     
     // MARK: - Selectors
@@ -102,9 +104,10 @@ class HomeController: UIViewController {
 }
 
 // MARK: - Search Controller Functions
-extension HomeController: UISearchResultsUpdating {
+extension HomeController: UISearchResultsUpdating, UISearchBarDelegate {
+    
     func updateSearchResults(for searchController: UISearchController) {
-        print("DEBUG PRINT", searchController.searchBar.text)
+        self.viewModel.updateSearchController(searchBarText: searchController.searchBar.text)
     }
 }
 
@@ -112,7 +115,10 @@ extension HomeController: UISearchResultsUpdating {
 
 extension HomeController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.allCoins.count
+        
+        let inSearchMode = self.viewModel.inSearchMode(searchController)
+        return inSearchMode ? self.viewModel.filteredCoins.count : self.viewModel.allCoins.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -120,7 +126,8 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
             fatalError("Unable to dequeue CoinCell in HomeController")
         }
         
-        let coin = self.viewModel.allCoins[indexPath.row]
+        let inSearchMode = self.viewModel.inSearchMode(searchController)
+        let coin = inSearchMode ? self.viewModel.filteredCoins[indexPath.row] : self.viewModel.allCoins[indexPath.row]
         cell.configure(with: coin)
         
         return cell
@@ -133,7 +140,8 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
-        let coin = self.viewModel.allCoins[indexPath.row]
+        let inSearchMode = self.viewModel.inSearchMode(searchController)
+        let coin = inSearchMode ? self.viewModel.filteredCoins[indexPath.row] : self.viewModel.allCoins[indexPath.row]
         let vm = ViewCryptoControllerViewModel(coin: coin)
         let vc = ViewCryptoController(vm)
         self.navigationController?.pushViewController(vc, animated: true)
